@@ -13,15 +13,20 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
+      //linear gradient bird logo
       Image(systemName: "bird")
         .imageScale(.large)
-        .foregroundStyle(.tint)
-
+        .foregroundStyle(
+          .linearGradient(
+            colors: [.blue, .green], startPoint: .leading,
+            endPoint: .trailing)
+        )
 
       Text("Hello Friend")
         .padding( /*@START_MENU_TOKEN@*/.all, 10.0 /*@END_MENU_TOKEN@*/)
         .foregroundColor(Color.green)
 
+      //alert button tied to two functions
       Button("Click for an Alert") {
         showAlert = true
 
