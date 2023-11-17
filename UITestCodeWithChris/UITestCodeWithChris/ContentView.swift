@@ -13,8 +13,17 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
+
+      //custom image from freepik license ok for commerical
+      Image("Logo")
+        .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+        .aspectRatio(contentMode: .fit)
+        .shadow(color: /*@START_MENU_TOKEN@*/ .black /*@END_MENU_TOKEN@*/, radius: 5)
+        .padding(.all, 10.0)
+
       //linear gradient bird logo
       Image(systemName: "bird")
+        .aspectRatio(contentMode: .fit)
         .imageScale(.large)
         .foregroundStyle(
           .linearGradient(
